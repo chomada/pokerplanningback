@@ -4,7 +4,7 @@ import { CorsOptions } from '@nestjs/common/interfaces/external/cors-options.int
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule,{cors:true});
- 
+ const cors = require('cors');
   app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -16,6 +16,7 @@ async function bootstrap() {
     origin: ['https://pypaplanning.netlify.app', 'http://localhost:3000'],
   }
   app.enableCors(corsOptions);
+  app.use(cors());
 
   await app.listen(3001);
 }
