@@ -30,8 +30,7 @@
     "@nestjs/websockets": "^9.4.1",
     "cors": "^2.8.5",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0",
-    "webpack-dev-server": "^4.15.0"
+    "rxjs": "^7.2.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
@@ -54,7 +53,10 @@
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
     "tsconfig-paths": "4.2.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "webpack-dev-middleware": "^6.1.1",
+    "webpack-dev-server": "^4.15.0",
+    "webpack-hot-middleware": "^2.25.3"
   },
   "jest": {
     "moduleFileExtensions": [
