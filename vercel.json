@@ -16,11 +16,7 @@
                 "PUT",
                 "DELETE"
             ],
-            "headers": {
-                "source": "/(.*)",
-                "headers": "*" 
-                                  
-              }
+            "headers": { "key": "Access-Control-Allow-Credentials", "value": "true" }
         }
     ]
 }
