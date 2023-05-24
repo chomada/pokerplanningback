@@ -4,13 +4,11 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: [
-      'http://localhost:3000',
-      'https://pypaplanning.netlify.app/',
-    ],
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    allowedHeaders: ['content-type'],
+    origin: ['http://localhost:3000','https://pypaplanning.netlify.app/'],
     credentials: true,
   });
+  
   await app.listen(3001);
 }
 bootstrap();
