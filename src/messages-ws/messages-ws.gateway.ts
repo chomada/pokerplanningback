@@ -3,7 +3,7 @@ import { MessagesWsService } from './messages-ws.service';
 import { Server, Socket } from 'socket.io';
 import { NewMessageDto } from './new-message.dto';
 
-@WebSocketGateway()
+@WebSocketGateway({ cors: true })
 export class MessagesWsGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
   @WebSocketServer() wss: Server;
