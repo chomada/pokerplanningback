@@ -18,9 +18,8 @@
             ],
             "headers": {
                 "source": "/(.*)",
-                "headers": 
-                  true
-                
+                "headers": "*" 
+                                  
               }
         }
     ]
