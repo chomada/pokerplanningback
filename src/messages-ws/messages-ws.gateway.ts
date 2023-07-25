@@ -38,4 +38,12 @@ export class MessagesWsGateway implements OnGatewayConnection, OnGatewayDisconne
     }
 
   }
+  @SubscribeMessage('message-from-client3')
+  onMessageFromClient3(client: Socket, payload: any) {
+
+      this.wss.emit('message-from-server3', payload);
+  
+
+  }
+
 }
