@@ -43,7 +43,17 @@ export class MessagesWsGateway implements OnGatewayConnection, OnGatewayDisconne
 
       this.wss.emit('message-from-server3', payload);
   
+  }
+  @SubscribeMessage('message-from-client4')
+  onMessageFromClient4(client: Socket, payload: any) {
+
+    if (payload.disabledCount == true) {
+      this.wss.emit('message-from-server4', true);
+    } else {
+      this.wss.emit('message-from-server4', false);
+    }
 
   }
+
 
 }
